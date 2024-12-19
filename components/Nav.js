@@ -8,7 +8,11 @@ import IconHex from "./icon/hex";
 import IconLogo from "./icon/logo";
 import Link from "next/link";
 import Menu from "./meun";
-const StyledHeader = styled.header`
+const StyledHeader = styled.header.attrs(
+  ({ $scrollDirection, $scrolledToTop }) => ({
+    "aria-expanded": $scrollDirection,
+  })
+)`
   ${({ theme }) => theme.mixins.flexBetween};
   position: fixed;
   top: 0;
@@ -33,8 +37,8 @@ const StyledHeader = styled.header`
   }
   @media (prefers-reduced-motion: no-preference) {
     ${(props) =>
-      props.scrollDirection === "up" &&
-      !props.scrolledToTop &&
+      props.$scrollDirection === "up" &&
+      !props.$scrolledToTop &&
       css`
         height: var(--nav-scroll-height);
         transform: translateY(0px);
@@ -43,8 +47,8 @@ const StyledHeader = styled.header`
       `};
 
     ${(props) =>
-      props.scrollDirection === "down" &&
-      !props.scrolledToTop &&
+      props.$scrollDirection === "down" &&
+      !props.$scrolledToTop &&
       css`
         height: var(--nav-scroll-height);
         transform: translateY(calc(var(--nav-scroll-height) * -1));
@@ -219,7 +223,10 @@ const Nav = ({ isHome }) => {
   const areRef = useRef(null);
   const qrRef = useRef(null);
   return (
-    <StyledHeader>
+    <StyledHeader
+      $scrollDirection={scrollDirection}
+      $scrolledToTop={scrolledToTop}
+    >
       <StyledNav>
         {prefersReducedMotion ? (
           <>

@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useScrollDirection, usePrefersReducedMotion } from "@/hooks";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { loaderDelay } from "@/utils";
@@ -17,7 +17,9 @@ const StyledHeader = styled.header`
   padding: 0px 50px;
   width: 100%;
   height: var(--nav-height);
-  background-color: rgba(10, 25, 47, 0.85);
+  /* background-color: rgba(10, 25, 47, 0.85); */
+  /* background-color: rgba(0, 0, 85, 0.85); */
+  background-color: black;
   filter: none !important;
   pointer-events: auto !important;
   user-select: auto !important;
@@ -64,8 +66,8 @@ const StyledNav = styled.nav`
 
     a {
       color: var(--green);
-      width: 42px;
-      height: 42px;
+      width: 62px;
+      height: 62px;
       position: relative;
       z-index: 1;
 
@@ -74,6 +76,7 @@ const StyledNav = styled.nav`
         top: 0;
         left: 0;
         z-index: -1;
+
         @media (prefers-reduced-motion: no-preference) {
           transition: var(--transition);
         }
@@ -211,6 +214,10 @@ const Nav = ({ isHome }) => {
       Resume
     </a>
   );
+  const nodeRef = useRef(null);
+  const mapRef = useRef(null);
+  const areRef = useRef(null);
+  const qrRef = useRef(null);
   return (
     <StyledHeader>
       <StyledNav>
@@ -235,8 +242,67 @@ const Nav = ({ isHome }) => {
           <>
             <TransitionGroup>
               {isMounted && (
-                <CSSTransition classNames={fadeClass} timeout={timeout}>
+                <CSSTransition
+                  nodeRef={nodeRef}
+                  classNames={fadeClass}
+                  timeout={timeout}
+                >
                   <>{Logo}</>
+                </CSSTransition>
+              )}
+            </TransitionGroup>
+            <StyledLinks>
+              <ol>
+                <TransitionGroup component={null}>
+                  {isMounted &&
+                    navLinks &&
+                    navLinks.map(({ url, name }, i) => (
+                      <CSSTransition
+                        key={i}
+                        classNames={fadeDownClass}
+                        timeout={timeout}
+                        nodeRef={mapRef}
+                      >
+                        <li
+                          key={i}
+                          style={{
+                            transitionDelay: `${isHome ? i * 100 : 0}ms`,
+                          }}
+                        >
+                          <Link href={url}>{name}</Link>
+                        </li>
+                      </CSSTransition>
+                    ))}
+                </TransitionGroup>
+              </ol>
+              <TransitionGroup component={null}>
+                {isMounted && (
+                  <CSSTransition
+                    nodeRef={areRef}
+                    classNames={fadeDownClass}
+                    timeout={timeout}
+                  >
+                    <div
+                      style={{
+                        transitionDelay: `${
+                          isHome ? navLinks.length * 100 : 0
+                        }ms`,
+                      }}
+                    >
+                      {ResumeLink}
+                    </div>
+                  </CSSTransition>
+                )}
+              </TransitionGroup>
+            </StyledLinks>
+            <TransitionGroup component={null}>
+              {isMounted && (
+                <CSSTransition
+                  nodeRef={qrRef}
+                  classNames={fadeClass}
+                  timeout={timeout}
+                >
+                  <Menu />
                 </CSSTransition>
               )}
             </TransitionGroup>

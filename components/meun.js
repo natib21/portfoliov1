@@ -13,7 +13,9 @@ const StyledMenu = styled.div`
     display: block;
   }
 `;
-const StyledHamburgerButton = styled.button`
+const StyledHamburgerButton = styled.button.attrs(({ menuOpen }) => ({
+  "aria-expanded": menuOpen, // Use $menuOpen only for accessibility
+}))`
   display: none;
 
   @media (max-width: 768px) {
@@ -85,6 +87,7 @@ const StyledHamburgerButton = styled.button`
     }
   }
 `;
+
 const StyledSidebar = styled.aside`
   display: none;
 
@@ -246,7 +249,7 @@ const Menu = () => {
         </StyledHamburgerButton>
 
         <StyledSidebar
-          menuOpen={menuOpen}
+          // menuOpen={menuOpen}
           aria-hidden={!menuOpen}
           tabIndex={menuOpen ? 1 : -1}
         >

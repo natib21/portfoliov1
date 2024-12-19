@@ -66,8 +66,8 @@ const StyledNav = styled.nav`
 
     a {
       color: var(--green);
-      width: 62px;
-      height: 62px;
+      width: 42px;
+      height: 42px;
       position: relative;
       z-index: 1;
 

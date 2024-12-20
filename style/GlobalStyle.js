@@ -1,11 +1,11 @@
 import { createGlobalStyle } from "styled-components";
-// import fonts from "./fonts";
+import Fonts from "./font";
 import variables from "./variables";
 import TransitionStyles from "./TransitionStyles";
 import PrismStyles from "./PrismStyles";
 
 const GlobalStyle = createGlobalStyle`
-  /*  ${fonts};  */
+    ${Fonts};  
   ${variables}
 
   html {
@@ -74,7 +74,7 @@ const GlobalStyle = createGlobalStyle`
     overflow-x: hidden;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    background-color: var(--navy);
+    background-color: black;
     color: var(--slate);
     font-family: var(--font-sans);
     font-size: var(--fz-xl);

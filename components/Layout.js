@@ -9,6 +9,9 @@ import { useState, useEffect } from "react";
 
 import Loader from "./Loader";
 import Nav from "./Nav";
+import Social from "./Social";
+import Email from "./Email";
+import Footer from "./footer";
 
 const StyledContent = styled.div`
   display: flex;
@@ -56,6 +59,13 @@ export default function Layout({ children }) {
       ) : (
         <StyledContent>
           <Nav isHome={isHome} />
+          <Social isHome={isHome} />
+          <Email isHome={isHome} />
+
+          <div id="content">
+            {children}
+            <Footer />
+          </div>
         </StyledContent>
       )}
     </>

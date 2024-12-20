@@ -252,7 +252,7 @@ const Menu = () => {
 
         <StyledSidebar
           $menuOpen={menuOpen}
-          aria-hidden={!menuOpen}
+          /*   aria-hidden={!menuOpen} */
           tabIndex={menuOpen ? 1 : -1}
         >
           <nav ref={navRef}>

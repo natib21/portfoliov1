@@ -3,6 +3,10 @@ module.exports = {
 
   socialMedia: [
     {
+      name: "Call",
+      url: "+251923479921",
+    },
+    {
       name: "GitHub",
       url: "https://github.com/natib21",
     },

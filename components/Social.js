@@ -46,13 +46,21 @@ const Social = ({ isHome }) => {
     <Side isHome={isHome} orientation="left">
       <StyledSocialList>
         {socialMedia &&
-          socialMedia.map(({ url, name }, i) => (
-            <li key={i}>
-              <a href={url} aria-label={name} target="_blank" rel="noreferrer">
-                <Icon name={name} />
-              </a>
-            </li>
-          ))}
+          socialMedia.map(({ url, name }, i) => {
+            const isCallLink = name === "Call";
+            return (
+              <li key={i}>
+                <a
+                  href={isCallLink ? `tel:${url}` : url}
+                  aria-label={name}
+                  target={!isCallLink ? "_blank" : undefined}
+                  rel="noreferrer"
+                >
+                  <Icon name={name} />
+                </a>
+              </li>
+            );
+          })}
       </StyledSocialList>
     </Side>
   );

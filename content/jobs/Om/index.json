@@ -1,0 +1,19 @@
+{
+  "date": "2024-12-21",
+  "title": "MERN Stack Developer",
+  "company": "OM Consulting ",
+  "location": "Meskel Flower, Addis Ababa",
+  "range": "July - December 2017",
+  "url": "#",
+  "description": [
+    "Developed and styled interactive web applications for Vamos using React JS and SCSS.",
+    "Built and shipped MERN stack projects for various companies, focusing on third-party and internal API integrations.",
+    "Collaborated with cross-functional teams to design, develop, and deploy scalable web applications.",
+    "Implemented full-stack solutions using MongoDB, Express.js, React.js, and Node.js to enhance client platforms.",
+    "Worked with RESTful APIs to integrate external services, ensuring seamless data flow across applications.",
+    "Optimized application performance, reducing load times and improving responsiveness.",
+    "Contributed to the creation of modular, reusable components and improved code quality with best practices in React.",
+    "Utilized Git and GitHub for version control and project collaboration within an Agile environment.",
+    "Ensured cross-browser compatibility and mobile responsiveness to deliver a consistent user experience."
+  ]
+}

@@ -1,9 +1,10 @@
 import { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
-import sr from "@/utils/sr";
-import { srConfig } from "@/config";
+
 import { usePrefersReducedMotion } from "@/hooks";
 import Image from "next/image";
+import sr from "@/utils/sr";
+import { srConfig } from "@/config";
 
 const StyledAboutSection = styled.section`
   max-width: 900px;
@@ -136,6 +137,7 @@ const About = () => {
     "Mongo DB",
     "PostgreSQL",
     "GO",
+    "React Native",
   ];
 
   return (

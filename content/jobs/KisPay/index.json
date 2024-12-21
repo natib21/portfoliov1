@@ -1,0 +1,18 @@
+{
+  "date": "2024-12-21",
+  "title": "React JS Developer",
+  "company": "KisPay ",
+  "location": "Piassa, Addis Ababa",
+  "range": "July 2024 - Present",
+  "url": "#",
+  "description": [
+   " Developed and maintained web applications using React JS and TypeScript, ensuring high performance and scalability.</p>",
+    "Collaborated with UI/UX designers to create responsive and visually appealing user interfaces for payment gateway solutions.",
+    "Integrated RESTful APIs and third-party services to enhance the functionality of KisPay's platform.",
+    "Optimized front-end code for faster load times and a smooth user experience, following best practices and code reviews.",
+    "Implemented state management using React hooks and Context API for efficient data flow across components.",
+    "Worked in an Agile environment, attending daily standups and sprint planning sessions, to ensure the timely delivery of features.",
+    "Ensured cross-browser compatibility and responsive design for a seamless experience on all devices and screen sizes.",
+    "Contributed to improving code quality by writing unit and integration tests using Jest and React Testing Library."
+  ]
+}

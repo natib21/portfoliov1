@@ -4,6 +4,8 @@ import styled from "styled-components";
 import Layout from "@/components/Layout";
 import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
+import Jobs from "@/components/sections/jobs";
+import Featured from "@/components/sections/Featured";
 const Wrapper = styled.div`
   background-color: #f0f0f0;
   padding: 20px;
@@ -19,6 +21,8 @@ export default function HomePage() {
       <StyledMainContainer className="fillHeight">
         <Hero />
         <About />
+        <Jobs />
+        <Featured />
       </StyledMainContainer>
     </Layout>
   );

@@ -6,6 +6,7 @@ import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
 import Jobs from "@/components/sections/jobs";
 import Featured from "@/components/sections/Featured";
+import Contact from "@/components/sections/Contact";
 const Wrapper = styled.div`
   background-color: #f0f0f0;
   padding: 20px;
@@ -23,6 +24,7 @@ export default function HomePage() {
         <About />
         <Jobs />
         <Featured />
+        <Contact />
       </StyledMainContainer>
     </Layout>
   );

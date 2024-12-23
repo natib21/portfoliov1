@@ -175,7 +175,7 @@ const Jobs = () => {
     { node: { frontmatter: Kispay, html: Kispay.description } },
     { node: { frontmatter: Om, html: Om.description } },
   ];
-  console.log(jobsData);
+
   const [activeTabId, setActiveTabId] = useState(0);
   const [tabFocus, setTabFocus] = useState(null);
   const tabs = useRef([]);
@@ -285,7 +285,7 @@ const Jobs = () => {
                       </span>
                     </h3>
                     <p className="range">{range}</p>
-                    {console.log(html)}
+
                     <div>
                       <ul>
                         {html.map((item, index) => (

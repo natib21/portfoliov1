@@ -1,0 +1,19 @@
+{
+  "date": "2",
+  "title": "Restaurant MGMT System",
+  "cover": "/static/image/Restaurant.png",
+  "github": "https://github.com/natib21/restaurant-BO",
+  "external": "#",
+  "tech": [
+    "MongoDB",
+    "Express",
+    "React",
+    "Node.js",
+    "Tailwind",
+    "MERN"
+  ],
+  "cta": null,
+  "description": [
+"A full-stack restaurant management system with dashboards for admins, waiters, and kitchen staff, featuring order management, real-time updates, and role-based access. Built with the MERN stack."
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "date": "1",
+  "title": "Movie Site",
+  "cover": "/static/image/Movie.png",
+  "github": "https://github.com/natib21/the-popcorn-movies",
+  "external": "https://the-pop-movies.netlify.app/",
+  "tech": [
+    "React",
+    "SCSS",
+    "Youtube API",
+    "TMDB API",
+    "Netlify"
+  ],
+   "cta": null,
+  "description": [
+    "A web application designed for movie enthusiasts to explore and discover a vast collection of films."
+   
+  ]
+}

@@ -1,10 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
+import Image from "next/image";
 
 import { usePrefersReducedMotion } from "@/hooks";
-import Image from "next/image";
-import sr from "@/utils/sr";
-import { srConfig } from "@/config";
 
 const StyledAboutSection = styled.section`
   max-width: 900px;
@@ -19,6 +17,7 @@ const StyledAboutSection = styled.section`
     }
   }
 `;
+
 const StyledText = styled.div`
   ul.skills-list {
     display: grid;
@@ -115,16 +114,18 @@ const StyledPic = styled.div`
     }
   }
 `;
+
 const About = () => {
-  const revealContainer = useRef(null);
+  const [fadeIn, setFadeIn] = useState(false);
   const prefersReducedMotion = usePrefersReducedMotion();
+
   useEffect(() => {
     if (prefersReducedMotion) {
-      return;
+      return; // Skip the animation if reduced motion is preferred
     }
-
-    sr.reveal(revealContainer.current, srConfig());
+    setFadeIn(true); // Trigger fade-in animation when the component is mounted
   }, []);
+
   const skills = [
     "JavaScript (ES6+)",
     "TypeScript",
@@ -141,31 +142,32 @@ const About = () => {
   ];
 
   return (
-    <StyledAboutSection id="about" ref={revealContainer}>
+    <StyledAboutSection id="about" style={{ opacity: fadeIn ? 1 : 0, transition: 'opacity 1s ease' }}>
       <h2 className="numbered-heading">About Me</h2>
       <div className="inner">
         <StyledText>
           <div>
             <p>
               Hello! My name is Nathnael Zelalem and I enjoy creating things
-              that live on the internet. based in Addis Ababa , Ethiopia
-              Currently, I'm a Senior Front-End Engineer at KisPay.
+              that live on the internet. Based in Addis Ababa, Ethiopia, I am
+              currently a Senior Front-End Engineer at KisPay.
             </p>
             <p>
-              specializing in React TypeScript. I contribute to the creation and
-              maintenance of UI components that power MUI frontend, ensuring our
-              platform meets web accessibility standards and best practices to
-              deliver an inclusive user experience.
+              I specialize in React and TypeScript, contributing to the creation
+              and maintenance of UI components that power the MUI frontend,
+              ensuring our platform meets web accessibility standards and best
+              practices to deliver an inclusive user experience.
             </p>
             <p>
-              {" "}
               Fast-forward to today, and I’ve had the privilege of working at{" "}
-              <a href="#"> KisPay</a>
+              <a href="https://kispay.et/">KisPay</a>.
             </p>
             <p>Here are a few technologies I’ve been working with recently:</p>
           </div>
           <ul className="skills-list">
-            {skills && skills.map((skill, i) => <li key={i}>{skill}</li>)}
+            {skills.map((skill, i) => (
+              <li key={i}>{skill}</li>
+            ))}
           </ul>
         </StyledText>
         <StyledPic>
@@ -185,4 +187,5 @@ const About = () => {
     </StyledAboutSection>
   );
 };
+
 export default About;

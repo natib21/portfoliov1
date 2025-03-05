@@ -1,3 +1,4 @@
+"use client";
 import styled, { css } from "styled-components";
 import { useState, useEffect, useRef } from "react";
 import { useScrollDirection, usePrefersReducedMotion } from "@/hooks";
@@ -154,6 +155,7 @@ const StyledLinks = styled.div`
 `;
 
 const Nav = ({ isHome }) => {
+  
   const [isMounted, setIsMounted] = useState(false);
   const scrollDirection = useScrollDirection("down");
   const [scrolledToTop, setScrolledToTop] = useState(true);
@@ -211,7 +213,7 @@ const Nav = ({ isHome }) => {
   const ResumeLink = (
     <a
       className="resume-button"
-      href="/resume.pdf"
+      href="/static/pdf/Nathnael_CV.pdf"
       target="_blank"
       rel="noopener noreferrer"
     >
@@ -222,6 +224,8 @@ const Nav = ({ isHome }) => {
   const mapRef = useRef(null);
   const areRef = useRef(null);
   const qrRef = useRef(null);
+
+
   return (
     <StyledHeader
       $scrollDirection={scrollDirection}

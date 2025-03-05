@@ -1,7 +1,7 @@
 import { CSSTransition } from "react-transition-group";
 import { srConfig } from "@/config";
 import { KEY_CODES } from "@/utils";
-import sr from "@/utils/sr";
+// import sr from "@/utils/sr";
 import styled from "styled-components";
 import { useState, useEffect, useRef } from "react";
 
@@ -180,14 +180,14 @@ const Jobs = () => {
   const [tabFocus, setTabFocus] = useState(null);
   const tabs = useRef([]);
   const revealContainer = useRef(null);
-  const prefersReducedMotion = usePrefersReducedMotion();
+/*   const prefersReducedMotion = usePrefersReducedMotion();
   useEffect(() => {
     if (prefersReducedMotion) {
       return;
     }
 
     sr.reveal(revealContainer.current, srConfig());
-  }, []);
+  }, []); */
   const focusTab = () => {
     if (tabs.current[tabFocus]) {
       tabs.current[tabFocus].focus();

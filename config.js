@@ -20,12 +20,9 @@ module.exports = {
     },
     {
       name: "Linkedin",
-      url: "www.linkedin.com/in/nathnael-zelalem",
+      url: "https://www.linkedin.com/in/nathnael-zelalem",
     },
-    {
-      name: "Codepen",
-      url: "https://codepen.io/bchiang7",
-    },
+  
   ],
 
   navLinks: [

@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
-import sr from "@/utils/sr";
+// import sr from "@/utils/sr";
 import { srConfig } from "@/config";
 import { Icon } from "../icon";
 import { usePrefersReducedMotion } from "@/hooks";
@@ -308,10 +308,10 @@ const StyledProject = styled.li`
 `;
 const Featured = () => {
   const featuredProjects = [{ item: Movie }, { item: Restaurant }];
-  console.log(featuredProjects);
+
   const revealTitle = useRef(null);
   const revealProjects = useRef([]);
-  const prefersReducedMotion = usePrefersReducedMotion();
+/*   const prefersReducedMotion = usePrefersReducedMotion();
   useEffect(() => {
     if (prefersReducedMotion) {
       return;
@@ -321,7 +321,7 @@ const Featured = () => {
     revealProjects.current.forEach((ref, i) =>
       sr.reveal(ref, srConfig(i * 100))
     );
-  }, []);
+  }, []); */
 
   return (
     <section id="projects">
@@ -347,7 +347,7 @@ const Featured = () => {
 
                     <div className="project-description">
                       {description.map((item, index) => (
-                        <li key={index}>{item}</li>
+                        <div key={index}>{item}</div>
                       ))}
                     </div>
 

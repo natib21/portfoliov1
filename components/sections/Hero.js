@@ -63,7 +63,7 @@ const Hero = () => {
         I’m a software developer specializing in building (and occasionally
         designing) exceptional digital experiences. Currently, I’m focused on
         building accessible,Payment Gateway at{" "}
-        <a href="https://kispay.org/" target="_blank" rel="noreferrer">
+        <a href="https://kispay.et/" target="_blank" rel="noreferrer">
           KisPay
         </a>
         .
@@ -73,7 +73,7 @@ const Hero = () => {
   const five = (
     <a
       className="email-link"
-      href="https://www.newline.co/courses/build-a-spotify-connected-app"
+      href="https://1drv.ms/w/c/6ecf6d699ff9f52e/ES71-Z9pbc8ggG52AwAAAAABIdL1H_wQo3Gx76DbyX7puA?e=zwDWFt"
       target="_blank"
       rel="noreferrer"
     >

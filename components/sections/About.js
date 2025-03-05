@@ -137,7 +137,7 @@ const About = () => {
     "Mongo DB",
     "PostgreSQL",
     "GO",
-    "React Native",
+    "Nest js",
   ];
 
   return (

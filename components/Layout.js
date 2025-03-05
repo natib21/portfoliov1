@@ -66,7 +66,7 @@ export default function Layout({ children }) {
             <Footer />
           </div>
         </StyledContent>
-      )}
+     )}  
     </>
   );
 }

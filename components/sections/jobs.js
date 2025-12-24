@@ -10,7 +10,7 @@ import Om from "../../content/jobs/Om/index.json";
 import TiruSolutions from "../../content/jobs/TiruSolution/index.json"
 import { usePrefersReducedMotion } from "@/hooks";
 const StyledJobsSection = styled.section`
-  max-width: 700px;
+  max-width: 900px;
 
   .inner {
     display: flex;

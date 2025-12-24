@@ -12,6 +12,24 @@ import TiruSolution from '../../content/featured/TiruSolutions/index.json'
 import Dashborad from '../../content/featured/Dashboard/index.json'
 import KisPayMerchant from '../../content/featured/KispayMerchant'
 
+const StyledProjectSection = styled.section`
+  max-width: 900px;
+
+  .inner {
+    display: flex;
+
+    @media (max-width: 600px) {
+      display: block;
+    }
+
+    // Prevent container from jumping
+    @media (min-width: 700px) {
+      min-height: 340px;
+    }
+  }
+`;
+
+
 const StyledProjectsGrid = styled.ul`
   ${({ theme }) => theme.mixins.resetList};
 
@@ -155,7 +173,7 @@ const StyledProject = styled.li`
     }
   }
 
- .project-description {
+.project-description {
   ${({ theme }) => theme.mixins.boxShadow};
   position: relative;
   z-index: 2;
@@ -164,20 +182,33 @@ const StyledProject = styled.li`
   background-color: var(--light-navy);
   color: var(--light-slate);
   font-size: var(--fz-lg);
-  line-height: 1.6; /* Improved readability */
+  line-height: 1.6;
+  text-align: left;
+  max-height: 200px;           /* Use max-height instead of fixed height */
+  overflow-y: auto;            /* Only vertical scroll when needed */
+  overflow-x: hidden;
+
+  /* Hide scrollbar - WebKit browsers (Chrome, Safari, Edge) */
+  scrollbar-width: none;       /* Firefox */
+  -ms-overflow-style: none;    /* IE and Edge */
+
+  &::-webkit-scrollbar {
+    display: none;             /* Chrome, Safari, newer Edge */
+  }
 
   @media (max-width: 768px) {
     padding: 20px 0;
     background-color: transparent;
     box-shadow: none;
+    max-height: none;          /* No height limit on mobile */
+    overflow-y: visible;
   }
 
   p {
-    margin: 0 0 1em 0; /* Space between paragraphs */
-    text-align: left;
+    margin: 0 0 1em 0;
 
     &:last-child {
-      margin-bottom: 0; /* No extra space after last paragraph */
+      margin-bottom: 0;
     }
   }
 
@@ -342,7 +373,7 @@ const Featured = () => {
   }, []); */
 
   return (
-    <section id="projects">
+    <StyledProjectSection id="projects">
       <h2 className="numbered-heading" ref={revealTitle}>
         Some Things I’ve Built
       </h2>
@@ -418,7 +449,7 @@ const Featured = () => {
             );
           })}
       </StyledProjectsGrid>
-    </section>
+    </StyledProjectSection>
   );
 };
 

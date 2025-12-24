@@ -1,0 +1,26 @@
+{
+  "date": "1",
+  "title": "Tiru Restaurant Management System",
+  "cover": "/static/image/Restaurantm.png",
+  "github": "private",
+  "external": "https://restaurant-landing-page-flax.vercel.app/",
+  "tech": [
+    "React",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "Tailwind CSS",
+    "JWT Authentication",
+    "Cloudinary",
+    "Netlify",
+    "Render"
+  ],
+  "cta": null,
+  "description": [
+    "A full-stack Restaurant Management System built for Tiru Solutions, a startup focused on streamlining restaurant operations.",
+    "Features include menu management, table reservations, order tracking, POS integration, inventory control, staff scheduling, and real-time analytics dashboards.",
+    "Provides separate interfaces for restaurant admins, staff, and customers with secure role-based access.",
+    "Integrates payment processing and supports online ordering for seamless customer experience.",
+    "Designed to be scalable and customizable for various restaurant types and sizes."
+  ]
+}

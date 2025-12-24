@@ -20,14 +20,9 @@ module.exports = {
     },
     {
       name: "Linkedin",
-<<<<<<< HEAD
-      url: "www.linkedin.com/in/nathnael-zelalem",
-    },
-=======
       url: "https://www.linkedin.com/in/nathnael-zelalem",
     },
   
->>>>>>> 1cd3b03fca4fbbfb7f37d4975ab64cd9114e24a7
   ],
 
   navLinks: [

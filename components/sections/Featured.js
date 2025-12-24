@@ -7,6 +7,11 @@ import { usePrefersReducedMotion } from "@/hooks";
 import Image from "next/image";
 import Movie from "../../content/featured/Movie/index.json";
 import Restaurant from "../../content/featured/RestaurantOrderSys/index.json";
+import KisPay from "../../content/featured/KisPay/index.json";
+import TiruSolution from '../../content/featured/TiruSolutions/index.json'
+import Dashborad from '../../content/featured/Dashboard/index.json'
+import KisPayMerchant from '../../content/featured/KispayMerchant'
+
 const StyledProjectsGrid = styled.ul`
   ${({ theme }) => theme.mixins.resetList};
 
@@ -150,35 +155,41 @@ const StyledProject = styled.li`
     }
   }
 
-  .project-description {
-    ${({ theme }) => theme.mixins.boxShadow};
-    position: relative;
-    z-index: 2;
-    padding: 25px;
-    border-radius: var(--border-radius);
-    background-color: var(--light-navy);
-    color: var(--light-slate);
-    font-size: var(--fz-lg);
+ .project-description {
+  ${({ theme }) => theme.mixins.boxShadow};
+  position: relative;
+  z-index: 2;
+  padding: 25px;
+  border-radius: var(--border-radius);
+  background-color: var(--light-navy);
+  color: var(--light-slate);
+  font-size: var(--fz-lg);
+  line-height: 1.6; /* Improved readability */
 
-    @media (max-width: 768px) {
-      padding: 20px 0;
-      background-color: transparent;
-      box-shadow: none;
+  @media (max-width: 768px) {
+    padding: 20px 0;
+    background-color: transparent;
+    box-shadow: none;
+  }
 
-      &:hover {
-        box-shadow: none;
-      }
-    }
+  p {
+    margin: 0 0 1em 0; /* Space between paragraphs */
+    text-align: left;
 
-    a {
-      ${({ theme }) => theme.mixins.inlineLink};
-    }
-
-    strong {
-      color: var(--white);
-      font-weight: normal;
+    &:last-child {
+      margin-bottom: 0; /* No extra space after last paragraph */
     }
   }
+
+  a {
+    ${({ theme }) => theme.mixins.inlineLink};
+  }
+
+  strong {
+    color: var(--white);
+    font-weight: normal;
+  }
+}
 
   .project-tech-list {
     display: flex;
@@ -307,7 +318,14 @@ const StyledProject = styled.li`
   }
 `;
 const Featured = () => {
-  const featuredProjects = [{ item: Movie }, { item: Restaurant }];
+  const featuredProjects = [
+     {item:TiruSolution},
+     { item:KisPay},
+     { item:Dashborad},
+     { item:KisPayMerchant},
+     { item: Movie },
+     { item: Restaurant }
+    ];
 
   const revealTitle = useRef(null);
   const revealProjects = useRef([]);

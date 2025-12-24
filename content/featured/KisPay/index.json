@@ -1,0 +1,28 @@
+{
+  "date": "1",
+  "title": "KisPay - Digital Wallet & Payment System",
+  "cover": "/static/image/kispay.png",
+  "github": "private",
+  "external": "https://www.kispay.et/",
+  "tech": [
+    "React",
+    "TypeScript",
+    "Spring Boot",
+    "MySQL",
+    "Tailwind CSS",
+    "JWT Authentication",
+    "Telebirr API",
+    "CBE Birr API",
+    "Awash Bank API",
+    "Kacha API"
+  ],
+  "cta": null,
+  "description": [
+    "A full-stack digital wallet and payment platform built with React & TypeScript on the frontend and Spring Boot with MySQL on the backend, enabling secure and seamless financial transactions in Ethiopia.",
+    "Features include user registration & authentication, wallet balance management, peer-to-peer money transfers, bill payments, mobile top-ups, and comprehensive transaction history tracking.",
+    "Integrated major Ethiopian payment gateways: Telebirr, CBE Birr, Awash Bank, and Kacha for seamless fund loading, withdrawals, and direct payments.",
+    "Implemented secure API integrations with bank-grade encryption and OTP verification for all financial operations involving local payment providers.",
+    "Provided role-based dashboards for users and administrators with real-time transaction monitoring and reconciliation tools.",
+    "Designed for high scalability, reliability, and compliance with local financial regulations to support a growing user base across Ethiopia."
+  ]
+}

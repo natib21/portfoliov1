@@ -7,6 +7,7 @@ import { useState, useEffect, useRef } from "react";
 
 import Kispay from "../../content/jobs/KisPay/index.json";
 import Om from "../../content/jobs/Om/index.json";
+import TiruSolutions from "../../content/jobs/TiruSolution/index.json"
 import { usePrefersReducedMotion } from "@/hooks";
 const StyledJobsSection = styled.section`
   max-width: 700px;
@@ -172,6 +173,7 @@ const StyledTabPanel = styled.div`
 
 const Jobs = () => {
   const jobsData = [
+    { node: { frontmatter: TiruSolutions, html: TiruSolutions.description } },
     { node: { frontmatter: Kispay, html: Kispay.description } },
     { node: { frontmatter: Om, html: Om.description } },
   ];

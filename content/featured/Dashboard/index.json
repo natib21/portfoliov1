@@ -1,0 +1,28 @@
+{
+  "date": "1",
+  "title": "Tiru Solutions Dashboard",
+  "cover": "/static/image/restaurantMerchant.png",
+  "github": "https://github.com/natib21/tiru-solutions-dashboard",
+  "external": "https://tiru-dashboard.netlify.app/",
+  "tech": [
+    "React",
+    "TypeScript",
+    "Tailwind CSS",
+    "Recharts",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "JWT Authentication",
+    "Netlify",
+    "Render"
+  ],
+  "cta": null,
+  "description": [
+    "A modern, responsive admin dashboard built for Tiru Solutions to centrally manage and monitor the Restaurant Management System across multiple client restaurants.",
+    "Provides real-time analytics with interactive charts displaying sales, revenue trends, popular menu items, peak hours, and inventory status.",
+    "Features multi-restaurant support with role-based access for super admins, restaurant owners, and managers to view and manage their specific data.",
+    "Includes tools for overseeing orders, table occupancy, staff performance, customer feedback, and system-wide notifications.",
+    "Implemented secure authentication and data isolation to ensure each restaurant's information remains private and protected.",
+    "Designed with a clean, intuitive UI using TypeScript for type safety and Recharts for dynamic data visualization."
+  ]
+}

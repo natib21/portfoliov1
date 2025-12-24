@@ -1,0 +1,31 @@
+{
+  "date": "1",
+  "title": "KisPay Merchant App",
+  "cover": "/static/image/kispayMerchant.png",
+  "github": "private",
+  "external": "https://merchant.kispay.et/#/overview",
+  "tech": [
+    "React",
+    "TypeScript",
+    "Spring Boot",
+    "MySQL",
+    "Tailwind CSS",
+    "JWT Authentication",
+    "Recharts",
+    "Telebirr API",
+    "CBE Birr API",
+    "Awash Bank API",
+    "Kacha API",
+    "Netlify",
+    "Render"
+  ],
+  "cta": null,
+  "description": [
+    "A dedicated merchant dashboard and mobile-friendly web app for KisPay, enabling businesses to accept digital payments seamlessly via the KisPay ecosystem.",
+    "Features include QR code generation for payments, real-time transaction monitoring, sales analytics with interactive charts, refund processing, and settlement reports.",
+    "Integrated with major Ethiopian payment providers (Telebirr, CBE Birr, Awash Bank, Kacha) for instant payment notifications and automated reconciliation.",
+    "Provides secure merchant onboarding, KYC verification, and role-based access for business owners and staff.",
+    "Offers detailed insights into daily/weekly/monthly revenue, customer trends, and payment methods breakdown using Recharts for data visualization.",
+    "Built with a focus on usability for small to medium businesses in Ethiopia, ensuring fast performance and offline-capable transaction logging."
+  ]
+}

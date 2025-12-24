@@ -1,0 +1,19 @@
+{
+  "date": "2024-12-21",
+  "title": "Full Stack Developer",
+  "company": "Tiru Solutions",
+  "location": "Addis Ababa, Ethiopia",
+  "range": "January 2025 - Present",
+  "url": "https://restaurant-landing-page-flax.vercel.app/",
+  "description": [
+    "Designed and developed a comprehensive Restaurant Management System using the MERN stack (MongoDB, Express.js, React.js, Node.js) for efficient restaurant operations.",
+    "Built responsive and interactive frontend interfaces with React.js, incorporating features like menu management, order tracking, table reservations, and real-time dashboards.",
+    "Implemented robust backend services with Node.js and Express.js, including RESTful APIs for inventory management, staff scheduling, billing, and reporting.",
+    "Integrated MongoDB for scalable data storage, handling complex schemas for menus, orders, inventory, customer data, and analytics.",
+    "Developed features for POS (Point of Sale) integration, online ordering, payment processing, and third-party delivery service APIs.",
+    "Optimized application performance, ensuring fast load times, real-time updates with WebSockets, and mobile responsiveness for both admin and customer-facing interfaces.",
+    "Collaborated with the founding team in an Agile startup environment to iterate on product features based on user feedback and market needs.",
+    "Implemented secure authentication, role-based access control, and data validation to ensure system reliability and compliance.",
+    "Utilized Git for version control and deployed the application on cloud platforms, focusing on scalability for growing restaurant clients."
+  ]
+}
